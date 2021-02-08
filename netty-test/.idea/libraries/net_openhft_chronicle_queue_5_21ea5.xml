@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="net.openhft:chronicle-queue:5.21ea5" type="repository">
+    <properties maven-id="net.openhft:chronicle-queue:5.21ea5" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/openhft/chronicle-queue/5.21ea5/chronicle-queue-5.21ea5.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/openhft/chronicle-core/2.21ea12/chronicle-core-2.21ea12.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/openhft/chronicle-analytics/2.20.2/chronicle-analytics-2.20.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/19.0.0/annotations-19.0.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/openhft/chronicle-bytes/2.21ea3/chronicle-bytes-2.21ea3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/openhft/chronicle-wire/2.21ea6/chronicle-wire-2.21ea6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/openhft/compiler/2.21ea0/compiler-2.21ea0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/openhft/chronicle-threads/2.21ea2/chronicle-threads-2.21ea2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/openhft/affinity/3.21ea0/affinity-3.21ea0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/java/dev/jna/jna/5.5.0/jna-5.5.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/java/dev/jna/jna-platform/5.5.0/jna-platform-5.5.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-cli/commons-cli/1.4/commons-cli-1.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
