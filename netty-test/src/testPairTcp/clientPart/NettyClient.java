@@ -16,12 +16,12 @@ public class NettyClient {
         String host = "localhost";
         int port = 8080;
         EventLoopGroup workerGroup = new NioEventLoopGroup();
-
-        run(host, port, workerGroup);
+        NettyClient nettyClient = new NettyClient();
+        nettyClient.run(host, port, workerGroup);
 
     }
 
-    public static void run(String host, int port, EventLoopGroup workerGroup){
+    public void run(String host, int port, EventLoopGroup workerGroup){
         if(host == null || port == 0 || workerGroup == null)
             throw new NullPointerException("One of parametr equals null: host -"+host+
                     " port-"+port+

@@ -19,10 +19,11 @@ public class NettyServer {
     public static void main(String[]args) throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
-        run(8080, bossGroup, workerGroup);
+        NettyServer nettyServer = new NettyServer();
+        nettyServer.run(8080, bossGroup, workerGroup);
     }
 
-    public static void run(int port, EventLoopGroup bossGroup,
+    public void run(int port, EventLoopGroup bossGroup,
                            EventLoopGroup workerGroup) {
 
         if(port==0||bossGroup==null||workerGroup==null)

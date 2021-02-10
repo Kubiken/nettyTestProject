@@ -14,14 +14,19 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             throws Exception {
         MessageCreator mc = new MessageCreator();
         ChannelFuture future = ctx.writeAndFlush(mc.createDefaultMessage());
+        System.out.println("Send message");
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg)
             throws Exception {
+        System.out.println("Message geted");
         QueueMessage data = (QueueMessage) msg;
         QueueWriter ir = new QueueWriter();
         ir.write(data);
+        System.out.println(data.getSomeText());
+        System.out.println(data.getSomeNum());
+        System.out.println(data.getSomePrice());
         ctx.close();
     }
 }

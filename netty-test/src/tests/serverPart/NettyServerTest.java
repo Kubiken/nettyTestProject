@@ -11,7 +11,8 @@ class NettyServerTest {
     public void runWithNulls(){
         assertThrows(NullPointerException.class,
                 ()-> {
-                    NettyServer.run(0, null, null);
+            NettyServer nettyServer = new NettyServer();
+                    nettyServer.run(0, null, null);
                 });
     }
 
