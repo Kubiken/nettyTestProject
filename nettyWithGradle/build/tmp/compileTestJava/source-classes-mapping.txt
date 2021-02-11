@@ -1,0 +1,22 @@
+testPairTcp/serverPart/NettyServerTest.java
+ testPairTcp.serverPart.NettyServerTest
+testPairTcp/clientPart/ClientHandlerTest.java
+ testPairTcp.clientPart.ClientHandlerTest
+testPairTcp/clientPart/NettyClientTest.java
+ testPairTcp.clientPart.NettyClientTest
+testPairTcp/CQ/OutputRunnableTest.java
+ testPairTcp.CQ.OutputRunnableTest
+testPairTcp/models/messageCreator/MessageCreatorTest.java
+ testPairTcp.models.messageCreator.MessageCreatorTest
+testPairTcp/serverPart/SimpleProcessingHandlerTest.java
+ testPairTcp.serverPart.SimpleProcessingHandlerTest
+testPairTcp/bootstrapBuilder/BootstrapBuilderTest.java
+ testPairTcp.bootstrapBuilder.BootstrapBuilderTest
+testPairTcp/decoders/DecoderTest.java
+ testPairTcp.decoders.DecoderTest
+testPairTcp/CQ/QueueWriterTest.java
+ testPairTcp.CQ.QueueWriterTest
+testPairTcp/models/QueueMessageTest.java
+ testPairTcp.models.QueueMessageTest
+testPairTcp/decoders/EncoderTest.java
+ testPairTcp.decoders.EncoderTest

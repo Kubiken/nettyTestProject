@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testPairTcp.CQ.QueueWriterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-11T10:51:38" hostname="Mihail-Dev" time="0.147">
+  <properties/>
+  <testcase name="tryWrite()" classname="testPairTcp.CQ.QueueWriterTest" time="0.147"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -52,7 +52,10 @@ public class BootstrapBuilder {
 
         if(felg==null||selg==null||socketChanell==null||options==null)
         {
-            throw new NullPointerException("");
+            throw new NullPointerException("One of parametrs equals null: felg-"+felg.toString()+
+                    " selg-"+selg.toString()+
+                    " socketChanell-"+socketChanell.toString()+
+                    " options-"+options.toString());
         }
 
         ServerBootstrap b = new ServerBootstrap();

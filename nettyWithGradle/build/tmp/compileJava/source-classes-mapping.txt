@@ -1,0 +1,28 @@
+testPairTcp/models/QueueMessage.java
+ testPairTcp.models.QueueMessage
+testPairTcp/bootstrapBuilder/BootstrapBuilder.java
+ testPairTcp.bootstrapBuilder.BootstrapBuilder
+ testPairTcp.bootstrapBuilder.BootstrapBuilder$1
+ testPairTcp.bootstrapBuilder.BootstrapBuilder$2
+testPairTcp/serverPart/NettyServer.java
+ testPairTcp.serverPart.NettyServer
+testPairTcp/models/messageCreator/MessageCreator.java
+ testPairTcp.models.messageCreator.MessageCreator
+testPairTcp/CQ/OutputRunnable.java
+ testPairTcp.CQ.OutputRunnable
+testPairTcp/decoders/Decoder.java
+ testPairTcp.decoders.Decoder
+testPairTcp/clientPart/NettyClient.java
+ testPairTcp.clientPart.NettyClient
+testPairTcp/clientPart/ClientHandler.java
+ testPairTcp.clientPart.ClientHandler
+testPairTcp/CQ/QueueWriter.java
+ testPairTcp.CQ.QueueWriter
+testPairTcp/serverPart/SimpleProcessingHandler.java
+ testPairTcp.serverPart.SimpleProcessingHandler
+testPairTcp/decoders/Encoder.java
+ testPairTcp.decoders.Encoder
+testPairTcp/mainLoader/MainLoader.java
+ testPairTcp.mainLoader.MainLoader
+ testPairTcp.mainLoader.MainLoader$1
+ testPairTcp.mainLoader.MainLoader$2
