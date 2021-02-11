@@ -6,6 +6,7 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import net.openhft.chronicle.core.Jvm;
 import testPairTcp.bootstrapBuilder.BootstrapBuilder;
 
 import java.util.HashMap;
@@ -31,8 +32,12 @@ public class NettyClient {
             options.put(ChannelOption.SO_KEEPALIVE, true);
 
             Bootstrap b = BootstrapBuilder.bootstrapBuilder(workerGroup,NioSocketChannel.class, options);
-
+            while(!b.connect(host, port).isSuccess()) {
+                System.out.println("Connection failed. Retry after 5 sec. Press Ctrl+c to stop.");
+                Jvm.pause(5000);
+            }
             ChannelFuture f = b.connect(host, port).sync();
+
             System.out.println("Client sucsessfully started");
 
             f.channel().closeFuture().sync();

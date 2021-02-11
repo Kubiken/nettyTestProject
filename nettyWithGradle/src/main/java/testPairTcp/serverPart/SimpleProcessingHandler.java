@@ -31,8 +31,9 @@ public class SimpleProcessingHandler extends ChannelInboundHandlerAdapter {
         QueueMessage requestData = (QueueMessage) msg;
         ChannelFuture future = ctx.writeAndFlush(mc.createQueueMessage("Response string "+requestData.getSomeText(),
                 requestData.getSomePrice()+1, requestData.getSomeNum()+11));
-        future.addListener(ChannelFutureListener.CLOSE);
         System.out.println("Message modified and sended back");
+        future.addListener(ChannelFutureListener.CLOSE);
+
     }
 
 }

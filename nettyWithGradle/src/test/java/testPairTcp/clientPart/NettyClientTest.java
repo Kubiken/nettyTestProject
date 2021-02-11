@@ -17,16 +17,5 @@ class NettyClientTest {
         });
     }
 
-    @Test
-    public void tryStartClient(){
-        EventLoopGroup elg = Mockito.mock(EventLoopGroup.class);
-        try{
-            NettyClient nettyClient = new NettyClient();
-        nettyClient.run("localhost", 8080, elg);
-
-        }catch (Exception e){
-            fail("Can't start client");
-        }
-    }
 
 }

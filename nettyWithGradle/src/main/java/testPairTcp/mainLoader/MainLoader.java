@@ -29,8 +29,6 @@ public class MainLoader {
                 nettyServer.run(port, bossGroup, workerGroup);
             }});
 
-        Jvm.pause(5000);
-
         NettyClient nettyClient = new NettyClient();
         EventLoopGroup workerGroupClient = new NioEventLoopGroup();
         System.out.println("Trying to start client");
