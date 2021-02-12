@@ -1,0 +1,26 @@
+
+apply plugin: "application"
+
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(":server_part")
+}
+
+
+jar {
+
+    manifest {
+        attributes 'Main-Class': 'clientPart.NettyClient'
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+}

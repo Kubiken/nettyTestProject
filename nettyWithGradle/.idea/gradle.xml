@@ -9,6 +9,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/client_part" />
+            <option value="$PROJECT_DIR$/queue_reader" />
+            <option value="$PROJECT_DIR$/server_part" />
           </set>
         </option>
       </GradleProjectSettings>

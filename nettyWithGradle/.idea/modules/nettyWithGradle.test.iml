@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.system.module.type="sourceSet" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output-test url="file://$MODULE_DIR$/../../build/classes/java/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../src/test" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="nettyWithGradle.main" />
+    <orderEntry type="library" name="Gradle: net.openhft:chronicle-queue:5.20.123" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-all:4.1.13.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.mockito:mockito-all:1.10.19" level="project" />
+    <orderEntry type="library" name="Gradle: net.openhft:chronicle-wire:2.20.117" level="project" />
+    <orderEntry type="library" name="Gradle: net.openhft:chronicle-bytes:2.20.111" level="project" />
+    <orderEntry type="library" name="Gradle: net.openhft:chronicle-threads:2.20.111" level="project" />
+    <orderEntry type="library" name="Gradle: net.openhft:chronicle-core:2.20.126" level="project" />
+    <orderEntry type="library" name="Gradle: commons-cli:commons-cli:1.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.30" level="project" />
+    <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-commons:1.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.apiguardian:apiguardian-api:1.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.opentest4j:opentest4j:1.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.openhft:compiler:2.4.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:19.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.openhft:affinity:3.20.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.openhft:chronicle-analytics:2.20.2" level="project" />
+    <orderEntry type="library" name="Gradle: net.java.dev.jna:jna-platform:5.5.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.java.dev.jna:jna:5.5.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.6.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.platform:junit-platform-engine:1.6.0" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="nettyWithGradle.main" />
+</module>

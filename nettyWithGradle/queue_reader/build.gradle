@@ -1,0 +1,21 @@
+apply plugin: "application"
+
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+
+jar {
+
+    manifest {
+        attributes 'Main-Class': 'queueReader.OutputRunnable'
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+}

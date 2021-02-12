@@ -1,41 +1,33 @@
-plugins {
-    id 'java'
-}
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+subprojects {
 
-repositories {
-    mavenCentral()
-}
+    apply plugin: 'java'
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-    testImplementation 'org.mockito:mockito-all:1.10.19'
+    group 'org.example'
+    version '1.0-SNAPSHOT'
 
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-
-    implementation 'net.openhft:chronicle-queue:5.20.123'
-    implementation 'io.netty:netty-all:4.1.13.Final'
-
-    /*compile group: 'net.openhft', name: 'chronicle-queue', version: '5.20.123'
-    compile group: 'io.netty', name: 'netty-all', version: '4.1.13.Final'
-    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'*/
-}
-
-test {
-    useJUnitPlatform()
-}
-
-jar {
-
-    manifest {
-        attributes 'Main-Class': 'testPairTcp.mainLoader.MainLoader'
+    repositories {
+        mavenCentral()
     }
 
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+        testImplementation 'org.mockito:mockito-all:1.10.19'
+
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+        implementation 'net.openhft:chronicle-queue:5.20.123'
+        implementation 'io.netty:netty-all:4.1.13.Final'
+
     }
 
-    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+    test {
+        useJUnitPlatform()
+    }
+
+    task copyJars(type: Copy){
+        from 'build/libs'
+        include '*.jar'
+        into '../prjcDir'
+    }
 }
