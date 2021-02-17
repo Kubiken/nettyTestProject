@@ -1,4 +1,6 @@
 clientPart/NettyClientTest.java
  clientPart.NettyClientTest
+bootstrapBuilder/BootstrapBuilderTest.java
+ bootstrapBuilder.BootstrapBuilderTest
 clientPart/ClientHandlerTest.java
  clientPart.ClientHandlerTest

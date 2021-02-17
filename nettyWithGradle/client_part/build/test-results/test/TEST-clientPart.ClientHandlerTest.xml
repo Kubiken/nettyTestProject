@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="clientPart.ClientHandlerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-02-12T08:45:21" hostname="Mihail-Dev" time="0.069">
+<testsuite name="clientPart.ClientHandlerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-02-17T12:49:03" hostname="Mihail-Dev" time="0.069">
   <properties/>
   <testcase name="chanelActivationTest()" classname="clientPart.ClientHandlerTest" time="0.067"/>
   <testcase name="chanellReadingTest()" classname="clientPart.ClientHandlerTest" time="0.002"/>

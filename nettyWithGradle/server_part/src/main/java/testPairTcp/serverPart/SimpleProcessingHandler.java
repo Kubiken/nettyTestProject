@@ -5,8 +5,9 @@ import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import testPairTcp.models.QueueMessage;
-import testPairTcp.models.messageCreator.MessageCreator;
+import models.QueueMessage;
+import models.messageCreator.MessageCreator;
+
 
 public class SimpleProcessingHandler extends ChannelInboundHandlerAdapter {
     private ByteBuf tmp;

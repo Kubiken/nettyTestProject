@@ -1,20 +1,7 @@
-testPairTcp/models/QueueMessage.java
- testPairTcp.models.QueueMessage
+testPairTcp/serverPart/NettyServer.java
+ testPairTcp.serverPart.NettyServer
 testPairTcp/bootstrapBuilder/BootstrapBuilder.java
  testPairTcp.bootstrapBuilder.BootstrapBuilder
  testPairTcp.bootstrapBuilder.BootstrapBuilder$1
- testPairTcp.bootstrapBuilder.BootstrapBuilder$2
-testPairTcp/serverPart/NettyServer.java
- testPairTcp.serverPart.NettyServer
-testPairTcp/models/messageCreator/MessageCreator.java
- testPairTcp.models.messageCreator.MessageCreator
-testPairTcp/decoders/Decoder.java
- testPairTcp.decoders.Decoder
-testPairTcp/CQ/QueueWriter.java
- testPairTcp.CQ.QueueWriter
 testPairTcp/serverPart/SimpleProcessingHandler.java
  testPairTcp.serverPart.SimpleProcessingHandler
-testPairTcp/decoders/Encoder.java
- testPairTcp.decoders.Encoder
-testPairTcp/clientPart/ClientHandler.java
- testPairTcp.clientPart.ClientHandler

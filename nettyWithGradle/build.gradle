@@ -21,9 +21,6 @@ subprojects {
 
     }
 
-    test {
-        useJUnitPlatform()
-    }
 
     task copyJars(type: Copy){
         from 'build/libs'

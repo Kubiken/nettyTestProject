@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testPairTcp.serverPart.SimpleProcessingHandlerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-02-12T08:45:23" hostname="Mihail-Dev" time="0.015">
+<testsuite name="testPairTcp.serverPart.SimpleProcessingHandlerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-02-17T12:49:13" hostname="Mihail-Dev" time="0.01">
   <properties/>
-  <testcase name="chanellReadingTest()" classname="testPairTcp.serverPart.SimpleProcessingHandlerTest" time="0.014"/>
+  <testcase name="chanellReadingTest()" classname="testPairTcp.serverPart.SimpleProcessingHandlerTest" time="0.008"/>
   <testcase name="serverChannelKilling()" classname="testPairTcp.serverPart.SimpleProcessingHandlerTest" time="0.001"/>
-  <testcase name="serverChannelActivationTest()" classname="testPairTcp.serverPart.SimpleProcessingHandlerTest" time="0.0"/>
+  <testcase name="serverChannelActivationTest()" classname="testPairTcp.serverPart.SimpleProcessingHandlerTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

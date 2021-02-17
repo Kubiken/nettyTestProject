@@ -3,9 +3,9 @@ package clientPart;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import testPairTcp.CQ.QueueWriter;
-import testPairTcp.models.QueueMessage;
-import testPairTcp.models.messageCreator.MessageCreator;
+import CQ.QueueWriter;
+import models.QueueMessage;
+import models.messageCreator.MessageCreator;
 
 public class ClientHandler extends ChannelInboundHandlerAdapter {
 

@@ -16,11 +16,12 @@ public class NettyServer {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         NettyServer nettyServer = new NettyServer();
-        nettyServer.run(8080, bossGroup, workerGroup);
+        ServerBootstrap bootstrap = new ServerBootstrap();
+        nettyServer.run(8080, bossGroup, workerGroup, bootstrap);
     }
 
     public void run(int port, EventLoopGroup bossGroup,
-                           EventLoopGroup workerGroup) {
+                           EventLoopGroup workerGroup, ServerBootstrap b) {
 
         if(port==0||bossGroup==null||workerGroup==null)
             throw new NullPointerException("One of parametr equals null: port-"+port+
@@ -32,8 +33,8 @@ public class NettyServer {
             options.put(ChannelOption.SO_KEEPALIVE, true);
             options.put(ChannelOption.SO_BACKLOG, 128);
 
-            ServerBootstrap b = BootstrapBuilder.serverBootstrapBuilder(bossGroup,workerGroup,
-                    NioServerSocketChannel.class, options);
+            BootstrapBuilder.serverBootstrapBuilder(bossGroup,workerGroup,
+                    NioServerSocketChannel.class, options, b);
 
             ChannelFuture f = b.bind(port).sync();
             System.out.println("Server sucsessfully started");

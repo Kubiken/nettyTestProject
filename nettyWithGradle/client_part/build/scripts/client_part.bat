@@ -67,7 +67,7 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\client_part-1.0.jar;%APP_HOME%\lib\server_part-1.0.jar;%APP_HOME%\lib\chronicle-queue-5.20.123.jar;%APP_HOME%\lib\netty-all-4.1.13.Final.jar;%APP_HOME%\lib\chronicle-wire-2.20.117.jar;%APP_HOME%\lib\chronicle-bytes-2.20.111.jar;%APP_HOME%\lib\chronicle-threads-2.20.111.jar;%APP_HOME%\lib\chronicle-core-2.20.126.jar;%APP_HOME%\lib\commons-cli-1.4.jar;%APP_HOME%\lib\compiler-2.4.1.jar;%APP_HOME%\lib\affinity-3.20.0.jar;%APP_HOME%\lib\slf4j-api-1.7.30.jar;%APP_HOME%\lib\chronicle-analytics-2.20.2.jar;%APP_HOME%\lib\annotations-19.0.0.jar;%APP_HOME%\lib\jna-platform-5.5.0.jar;%APP_HOME%\lib\jna-5.5.0.jar
+set CLASSPATH=%APP_HOME%\lib\client_part-1.0.jar;%APP_HOME%\lib\utility-1.0.jar;%APP_HOME%\lib\chronicle-queue-5.20.123.jar;%APP_HOME%\lib\netty-all-4.1.13.Final.jar;%APP_HOME%\lib\chronicle-wire-2.20.117.jar;%APP_HOME%\lib\chronicle-bytes-2.20.111.jar;%APP_HOME%\lib\chronicle-threads-2.20.111.jar;%APP_HOME%\lib\chronicle-core-2.20.126.jar;%APP_HOME%\lib\commons-cli-1.4.jar;%APP_HOME%\lib\compiler-2.4.1.jar;%APP_HOME%\lib\affinity-3.20.0.jar;%APP_HOME%\lib\slf4j-api-1.7.30.jar;%APP_HOME%\lib\chronicle-analytics-2.20.2.jar;%APP_HOME%\lib\annotations-19.0.0.jar;%APP_HOME%\lib\jna-platform-5.5.0.jar;%APP_HOME%\lib\jna-5.5.0.jar
 
 
 @rem Execute client_part

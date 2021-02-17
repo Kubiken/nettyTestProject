@@ -4,8 +4,8 @@ import io.netty.channel.ChannelHandlerContext;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import testPairTcp.models.QueueMessage;
-import testPairTcp.models.messageCreator.MessageCreator;
+import models.QueueMessage;
+import models.messageCreator.MessageCreator;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
@@ -20,7 +20,7 @@ class SimpleProcessingHandlerTest {
     }
 
     @Test
-    void serverChannelActivationTest(){
+    void serverChannelActivationTest_expectingCorrectHandler(){
         ChannelHandlerContext ctx = Mockito.mock(ChannelHandlerContext.class);
         try {
             sph.handlerAdded(ctx);
@@ -30,7 +30,7 @@ class SimpleProcessingHandlerTest {
     }
 
     @Test
-    void chanellReadingTest(){
+    void chanellReadingTest_expectingCorrectReading(){
         ChannelHandlerContext ctx = Mockito.mock(ChannelHandlerContext.class);
         QueueMessage qm = new MessageCreator().createDefaultMessage();
         try {
@@ -41,7 +41,7 @@ class SimpleProcessingHandlerTest {
     }
 
     @Test
-    void serverChannelKilling(){
+    void serverChannelKilling_expectingCorrectChanelDestroy(){
         ChannelHandlerContext ctx = Mockito.mock(ChannelHandlerContext.class);
         try {
             sph.handlerRemoved(ctx);

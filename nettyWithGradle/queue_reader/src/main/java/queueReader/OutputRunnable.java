@@ -1,5 +1,6 @@
 package queueReader;
 
+import models.QueueMessage;
 import net.openhft.chronicle.core.Jvm;
 import net.openhft.chronicle.queue.ExcerptTailer;
 import net.openhft.chronicle.queue.impl.single.SingleChronicleQueue;
@@ -27,4 +28,6 @@ public class OutputRunnable {
                                 +" "+m.read("number").int32());
                 }));
     }
+
+
 }

@@ -8,9 +8,12 @@ repositories {
 }
 
 dependencies {
-    implementation project(":server_part")
+    implementation project(":utility")
 }
 
+test {
+    useJUnitPlatform()
+}
 
 jar {
 

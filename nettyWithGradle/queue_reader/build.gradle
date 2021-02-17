@@ -6,6 +6,14 @@ repositories {
     mavenCentral()
 }
 
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    implementation project(":utility")
+
+}
 
 jar {
 
