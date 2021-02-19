@@ -15,7 +15,7 @@ import testPairTcp.serverPart.SimpleProcessingHandler;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BootstrapBuilder {
+public class BootstrapBuilder {  //Передача ServerBootstrap объекта в метод и НПЕ ошибка
 
     public static ServerBootstrap serverBootstrapBuilder(
             EventLoopGroup felg, EventLoopGroup selg, Class socketChanell,

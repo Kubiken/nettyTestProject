@@ -13,7 +13,7 @@ import static org.mockito.Mockito.verify;
 class OutputRunnableTest {
 
     @Test
-    void tryReadFromQueue_expectingNoErrors(){
+    void tryReadFromQueue_expectingNoErrors(){ //фикс зис
         ExcerptTailer et = Mockito.mock(ExcerptTailer.class);
 
         try {

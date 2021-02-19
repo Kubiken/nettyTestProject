@@ -34,8 +34,6 @@ public class NettyClient {
             Scanner in = new Scanner(System.in);
             HashMap<ChannelOption, Object> options = new HashMap<>();
             options.put(ChannelOption.SO_KEEPALIVE, true);
-
-
             BootstrapBuilder.bootstrapBuilder(workerGroup,NioSocketChannel.class, options, b);
 
             ChannelFuture f = null;

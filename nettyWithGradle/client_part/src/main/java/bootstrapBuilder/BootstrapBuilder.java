@@ -16,7 +16,7 @@ import java.util.Map;
 public class BootstrapBuilder {
 
 
-    public static Bootstrap bootstrapBuilder(EventLoopGroup elg, Class socketChanell,
+    public static void bootstrapBuilder(EventLoopGroup elg, Class socketChanell,
                                              HashMap<ChannelOption, Object> options, Bootstrap b) {
 
         if (elg == null || socketChanell == null || options == null) {
@@ -39,7 +39,6 @@ public class BootstrapBuilder {
             }
         });
 
-        return b;
     }
 
 }

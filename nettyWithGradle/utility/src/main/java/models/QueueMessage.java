@@ -1,19 +1,19 @@
 package models;
 
-public class QueueMessage {
+public class QueueMessage { //Закрыть конструкторы, область видимости - пакет
 
     private final Integer someNum;
     private final String someText;
     private final Double somePrice;
 
 
-    public QueueMessage(String text, Double price, Integer num){
+    QueueMessage(String text, Double price, Integer num){
         this.someText = text;
         this.somePrice = price;
         this.someNum = num;
     }
 
-    public QueueMessage(){
+    QueueMessage(){
         this.someText = "zero_message";
         this.somePrice = 0.0;
         this.someNum = 0;

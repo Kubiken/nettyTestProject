@@ -1,7 +1,9 @@
 package models.messageCreator;
 
-import org.junit.jupiter.api.Test;
+import models.MessageCreator;
 import models.QueueMessage;
+import org.junit.jupiter.api.Test;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -11,19 +13,23 @@ class MessageCreatorTest {
     @Test
     public void messageCreating_expectingCorrectBuilderWork()
     {
-        QueueMessage qm = new QueueMessage("Vaskez", 20.0, 5);
-
         MessageCreator mc = new MessageCreator();
-        assertEquals(qm, mc.createQueueMessage("Vaskez",20.0,5));
+        QueueMessage qm = mc.createQueueMessage("Vaskez",20.0,5);
+
+        assertEquals("Vaskez", qm.getSomeText());
+        assertEquals(20.0, qm.getSomePrice());
+        assertEquals(5, qm.getSomeNum());
     }
 
     @Test
     public void messageDefaultCreating_expectingCorrectDefaultCreation()
     {
-        QueueMessage qm = new QueueMessage("Vamus", 2019.0, 99);
-
         MessageCreator mc = new MessageCreator();
-        assertEquals(qm, mc.createDefaultMessage());
+        QueueMessage qm = mc.createDefaultMessage();
+
+        assertEquals("Vamus", qm.getSomeText());
+        assertEquals(2019.0, qm.getSomePrice());
+        assertEquals(99, qm.getSomeNum());
     }
 
 }

@@ -12,16 +12,24 @@ import java.util.HashMap;
 
 public class NettyServer {
 
+    ChannelFuture channelFuture;
+    private boolean serverStatus = false;
+
     public static void main(String[]args) throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         NettyServer nettyServer = new NettyServer();
         ServerBootstrap bootstrap = new ServerBootstrap();
+
         nettyServer.run(8080, bossGroup, workerGroup, bootstrap);
     }
 
+    public boolean isServerStatus() {
+        return serverStatus;
+    }
+
     public void run(int port, EventLoopGroup bossGroup,
-                           EventLoopGroup workerGroup, ServerBootstrap b) {
+                    EventLoopGroup workerGroup, ServerBootstrap b) {
 
         if(port==0||bossGroup==null||workerGroup==null)
             throw new NullPointerException("One of parametr equals null: port-"+port+
@@ -36,14 +44,22 @@ public class NettyServer {
             BootstrapBuilder.serverBootstrapBuilder(bossGroup,workerGroup,
                     NioServerSocketChannel.class, options, b);
 
-            ChannelFuture f = b.bind(port).sync();
+            channelFuture = b.bind(port).sync();
+            serverStatus = true;
             System.out.println("Server sucsessfully started");
-            f.channel().closeFuture().sync();
+            channelFuture.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
             workerGroup.shutdownGracefully();
             bossGroup.shutdownGracefully();
         }
+    }
+
+    public void shutdown(){
+        serverStatus = false;
+        channelFuture.channel().close();
+        channelFuture.channel().parent().close();
+        System.out.println("Server successfully shutdowned");
     }
 }

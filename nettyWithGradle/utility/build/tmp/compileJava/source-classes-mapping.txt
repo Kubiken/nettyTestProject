@@ -1,10 +1,10 @@
-decoders/Decoder.java
- decoders.Decoder
 decoders/Encoder.java
  decoders.Encoder
+models/MessageCreator.java
+ models.MessageCreator
+decoders/Decoder.java
+ decoders.Decoder
 models/QueueMessage.java
  models.QueueMessage
-models/messageCreator/MessageCreator.java
- models.messageCreator.MessageCreator
 CQ/QueueWriter.java
  CQ.QueueWriter

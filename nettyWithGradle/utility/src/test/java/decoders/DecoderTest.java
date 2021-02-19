@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import models.QueueMessage;
-import models.messageCreator.MessageCreator;
+import models.MessageCreator;
 
 import java.nio.charset.Charset;
 import java.util.ArrayList;

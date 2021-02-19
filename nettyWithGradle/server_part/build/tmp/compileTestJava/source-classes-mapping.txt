@@ -1,5 +1,6 @@
 testPairTcp/serverPart/NettyServerTest.java
  testPairTcp.serverPart.NettyServerTest
+ testPairTcp.serverPart.NettyServerTest$1
 testPairTcp/serverPart/SimpleProcessingHandlerTest.java
  testPairTcp.serverPart.SimpleProcessingHandlerTest
 testPairTcp/bootstrapBuilder/BootstrapBuilderTest.java

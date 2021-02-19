@@ -5,7 +5,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import CQ.QueueWriter;
 import models.QueueMessage;
-import models.messageCreator.MessageCreator;
+import models.MessageCreator;
 
 public class ClientHandler extends ChannelInboundHandlerAdapter {
 
@@ -23,7 +23,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             throws Exception {
         System.out.println("Message geted by client");
         QueueMessage data = (QueueMessage) msg;
-        QueueWriter ir = new QueueWriter();
+        QueueWriter ir = new QueueWriter("TestPairTcp");
         ir.write(data);
         ctx.close();
     }

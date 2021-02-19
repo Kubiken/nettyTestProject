@@ -7,13 +7,17 @@ import models.QueueMessage;
 
 public class QueueWriter {
 
-    private ExcerptAppender appender;
+    final DocumentContext dc;
+    final ExcerptAppender appender;
 
-    public void write(QueueMessage msg) {
-        try (ChronicleQueue queue = ChronicleQueue.singleBuilder("TestPairTcp").build()) {
+    public QueueWriter(String path){
+        ChronicleQueue queue = ChronicleQueue.singleBuilder(path).build();
             appender = queue.acquireAppender();
-            try (final DocumentContext dc = appender.writingDocument()) {
+            dc = appender.writingDocument();
+    }
 
+    public void write(QueueMessage msg) { //переделать запись в очередь
+            try {
                 appender.writeDocument(w -> w.write("Message").marshallable(
                         m -> m.write("message").text(msg.getSomeText())
                                 .write("price").float64(msg.getSomePrice())
@@ -25,4 +29,4 @@ public class QueueWriter {
         }
     }
 
-}
+

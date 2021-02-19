@@ -6,23 +6,25 @@ import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import models.QueueMessage;
-import models.messageCreator.MessageCreator;
+import models.MessageCreator;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 public class SimpleProcessingHandler extends ChannelInboundHandlerAdapter {
     private ByteBuf tmp;
 
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) {
-        System.out.println("Handler added");
         tmp = ctx.alloc().buffer(4);
+        System.out.println("Handler added");
     }
 
     @Override
     public void handlerRemoved(ChannelHandlerContext ctx) {
-        System.out.println("Handler removed");
         tmp.release();
         tmp = null;
+        System.out.println("Handler removed");
     }
 
     @Override

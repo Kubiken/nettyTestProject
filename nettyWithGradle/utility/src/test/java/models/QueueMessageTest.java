@@ -2,7 +2,7 @@ package models;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import models.messageCreator.MessageCreator;
+import models.MessageCreator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

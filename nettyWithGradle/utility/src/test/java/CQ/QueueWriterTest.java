@@ -14,11 +14,7 @@ class QueueWriterTest {
     @Test
     void tryWriteToQueue_expectCorrectWritingInQueue() {
         QueueMessage qm = Mockito.spy(QueueMessage.class);
-        QueueWriter queueWriter = new QueueWriter();
-
-        when(qm.getSomeText()).thenReturn("Vamus");
-        when(qm.getSomePrice()).thenReturn(2019.0);
-        when(qm.getSomeNum()).thenReturn(11);
+        QueueWriter queueWriter = new QueueWriter("TestPairTcp");
 
         queueWriter.write(qm);
 
